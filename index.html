@@ -7,6 +7,39 @@
 
 		<style>
 			/* code css ici */
+		
+		h2 {
+			text-align: center;
+			color: #6495ed;
+			font-size: 18;
+		}
+		h1 {
+			text-align: center;
+			color: #6495ed;
+			padding: 10px;
+		}
+		footer {
+			text-align: center;
+		}
+		#textepresentation {
+			border-style: dotted;
+			padding: 10px;
+		}
+		.box {
+			display: flex;
+		}
+		.article {
+			text-align:justify;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		.tableautarif {
+			border-color:#6495ed;
+		}
+		.cellulestarif {
+			border-color:#6495ed;
+		}
+
 			/*
 			les titres des sections doivent être centrés, avec un fond de couleur #6495ed et un espacement interne de 10px
 			
@@ -24,30 +57,31 @@
 
 	<body>
 		<header id="top">
-			<!-- ajouter image du logo -->
+			<img src="logo1600.png" alt="Logo de l'école de musique"/> <!-- ajouter image du logo -->
 		</header>				
 
 		<nav>
 		<!-- ajouter des liens hypertexte vers les sections -->	
 			<ul>
 				<li>
-					Présentation</a>
+					<a href="#presentation">Présentation</a>
 				</li>
 				<li>
-					Actualites
+					<a href="#news">Actualités</a>
 				</li>
 				<li>
-					Tarifs 2021
+					<a href="#tarifs">Tarifs 2021</a>
 				</li>
 				<li>
-					Nous contacter
+					<a href="#contact">Nous contacter</a>
 				</li>
 			</ul>
 		</nav>
 			
 		<section id="presentation">
 			<h1>Notre école <a href="#top">&uarr;</a></h1>
-			<div id="textepresentation">
+			<div id="textepresentation" style="float: right">
+				<img src="presentation.jpg" alt="Image de présentation" style="margin:10px; float: left;" width="350"/>
 				<p>
 				<!-- le bloc doit avoir une bordure pointillée et un espacement interne de 10px -->
 				<!-- ajouter image de la présentation avec une bordure noire, une larguer de 350 pixels, une marge de 10 pixels -->
@@ -55,18 +89,20 @@
 				<!-- ajouter les mises en forme des textes en gras, souligné et italique les textes-->
 				<!-- organiser le texte avec les listes à puces numérotées et non numérotées -->
 				<!-- ajouter un lien de mail pour l'adresse mail -->
-				
 				L’école de musique municipale de la ville de D. dispense des cours d’instruments individuels ou collectifs pour enfants, adolescents et adultes, en fonction des places disponibles.</p>
 				Consultez notre planning et nos tarifs pour voir quels cours pourraient vous interesser. </p>
 				<br/>
-				<p>La marche à suivre ensuite pour vous inscrire est la suivante : 
-				Télécharger le dossier d'inscription sur notre site pour réunir les piéces demandées lors de l'inscription.
-					Nous contacter pour savoir s'il reste des places dans ce cours :
-						
-								Soit par mail à contact@ecolemusique.fr.
-							Soit par téléphone au 06 00 00 00 00.
-							Soit en venant directement au secrétariat aux horaires des cours.
-						Une fois que vous avez eu la confirmation de la reservation de votre place au cours, nous envoyer ou déposer au secrétariat le dossier d'inscription complet.
+				<p><b>La marche à suivre ensuite pour vous inscrire</b> est la suivante :
+				<ol>
+				<u><li>Télécharger le dossier d'inscription</u> sur notre site pour réunir les piéces demandées lors de l'inscription.</li>
+				<li><u>Nous contacter</u> pour savoir s'il reste des places dans ce cours :</li>
+						<ul style="list-style-type: circle">
+								<li>Soit par mail à <a href="mailto:contact@ecolemusique.fr">contact@ecolemusique.fr</a>.</li>
+								<li>Soit par téléphone au <i>06 00 00 00 00.</i></li>
+								<li>Soit en venant directement au secrétariat aux horaires des cours.</li>
+						</ul>
+					<li>Une fois que vous avez eu la confirmation de la reservation de votre place au cours, <u>nous envoyer ou déposer au secrétariat le dossier d'inscription complet</u>.</li>
+				</ol>
 				</p>
 			</div>
 		</section>
@@ -101,21 +137,22 @@
 			<!-- les cellules des tarifs pour la chorale et la formation musicale doivent être fusionnées -->
 			<!-- l'atelier new orleans doit pointer (lien hypertexte) vers le site de https://fr.wikipedia.org/wiki/Jazz_Nouvelle-Orl%C3%A9ans en ouvrant le lien dans une nouvelle fenetre du navigateur -->
 
-			
-			<!-- entetes des colonnes -->
-			Cours
-			Tarifs annuels pour les habitants de la commune (hors adhésion)
-			Tarifs annuels pour les autres inscrits (hors adhésion)
-			
-			<!-- données du tableau -->
-			Instrument 30 minutes / sem			490 euros		530 euros
-			Instrument 45 minutes / sem			655 euros		705 euros
-			Instrument 1 heure / sem			970 euros		1050 euros
-			Initiation musical (0-3 ans), éveil musical (3-5 ans) ou éveil instrumental (CP-CE1)		260 euros		300 euros
-			Chorale (à partir du CP)			Gratuit pour les élèves inscrits en instrument ou 110 euros pour les élèves non inscrits en instrument			Gratuit pour les élèves inscrits en instrument ou 150 euros pour les élèves non inscrits en instrument
-			Formation musicale (enfants et adultes) 			Gratuit pour les élèves inscrits en instrument ou 110 euros pour les élèves non inscrits en instrument			Gratuit pour les élèves inscrits en instrument ou 150 euros pour les élèves non inscrits en instrument
-			Atelier New Orleans (1h30 par semaine, à partir de 14 ans et 2 années de pratique ou 1 an sur audition)		300 euros pour les adultes. 190 euros pour les moins de 18 ans.			350 euros pour les adultes. 190 euros pour les moins de 18 ans.
-			
+			<table class="tableautarif" border="3">
+				<thead>
+						<!-- entetes des colonnes -->
+				<tr><th>Cours</th><th>Tarifs annuels pour les habitants de la commune (hors adhésion)</th><th>Tarifs annuels pour les autres inscrits (hors adhésion)</th></tr>
+				</thead>
+				<tbody class="cellulestarif" border="2"> 	<!-- données du tableau -->
+				<tr><td>Instrument 30 minutes / sem</td><td>490 euros</td><td>530 euros</td></tr>
+				<tr><td>Instrument 45 minutes / sem</td><td>655 euros</td><td>705 euros</td></tr>
+				<tr><td>Instrument 1 heure / sem</td><td>970 euros</td><td>1050 euros</td></tr>
+				<tr><td>Initiation musical (0-3 ans), éveil musical (3-5 ans) ou éveil instrumental (CP-CE1)</td><td>260 euros</td><td>300 euros</td></tr>
+				<tr><td>Chorale (à partir du CP)</td><td>Gratuit pour les élèves inscrits en instrument ou 110 euros pour les élèves non inscrits en instrument</td><td>Gratuit pour les élèves inscrits en instrument ou 150 euros pour les élèves non inscrits en instrument</td></tr>
+				<tr><td>Formation musicale (enfants et adultes)</td><td>Gratuit pour les élèves inscrits en instrument ou 110 euros pour les élèves non inscrits en instrument</td><td>Gratuit pour les élèves inscrits en instrument ou 150 euros pour les élèves non inscrits en instrument</td></tr>
+				<tr><td>Atelier New Orleans (1h30 par semaine, à partir de 14 ans et 2 années de pratique ou 1 an sur audition)</td><td>300 euros pour les adultes. 190 euros pour les moins de 18 ans.</td><td>350 euros pour les adultes. 190 euros pour les moins de 18 ans.</td></tr>
+				</tbody>
+				</table>
+
 		</section>
 			
 			
